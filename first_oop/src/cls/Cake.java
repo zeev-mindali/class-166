@@ -1,4 +1,4 @@
-package src.cls;
+package first_oop.src.cls;
 
 import java.util.Arrays;
 

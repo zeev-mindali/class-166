@@ -1,4 +1,4 @@
-package src.cls;
+package first_oop.src.cls;
 
 public class MyBakery {
     public static void main(String[] args) {
