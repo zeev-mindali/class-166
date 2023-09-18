@@ -1,6 +1,6 @@
-package MyBank;
+package oop_classes.MyBank;
 
-import MyBank.cls.User;
+import oop_classes.MyBank.cls.User;
 
 public class MyBankLogin {
     public static void main(String[] args) {

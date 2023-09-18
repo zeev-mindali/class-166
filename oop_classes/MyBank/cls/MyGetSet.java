@@ -1,4 +1,4 @@
-package MyBank.cls;
+package oop_classes.MyBank.cls;
 
 public class MyGetSet {
     private String name;

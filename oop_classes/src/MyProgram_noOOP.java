@@ -1,4 +1,4 @@
-package first_oop.src;
+package oop_classes.src;
 
 public class MyProgram_noOOP {
     //name of the cake

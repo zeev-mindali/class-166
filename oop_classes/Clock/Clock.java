@@ -1,4 +1,4 @@
-package Clock;
+package oop_classes.Clock;
 
 public class Clock {
     private int minutes;

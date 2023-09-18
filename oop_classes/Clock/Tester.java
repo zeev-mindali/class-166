@@ -1,4 +1,4 @@
-package Clock;
+package oop_classes.Clock;
 
 public class Tester {
     public static void main(String[] args) {
