@@ -94,11 +94,11 @@ public class Square {
 
 
     public String print(){
-        return getPrintRaz('*');
+        return this.getPrintRaz('*');
     }
 
     public String print(char sign){
-        return getPrintRaz(sign);
+        return this.getPrintRaz(sign);
     }
 
     public String spr() {
