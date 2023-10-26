@@ -30,7 +30,7 @@ public class Tester {
     }
 
     private static void printShort(Person[] persons){
-        Arrays.stream(persons).toList().forEach(System.out::println);
+        //Arrays.stream(persons).toList().forEach(System.out::println);
     }
 
     private static void spr(){
