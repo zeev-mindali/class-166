@@ -1,6 +1,9 @@
 package Clock.cls;
 
+import Static.cls.cls.SimpleClass;
+
 public class Clock {
+    public SimpleClass s1;
     private int hour;
     private int minutes;
 
