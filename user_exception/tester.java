@@ -1,5 +1,6 @@
 package user_exception;
 
+import user_exception.cls.NewUser;
 import user_exception.exceptions.LongException;
 import user_exception.exceptions.PasswordMismatchException;
 import user_exception.exceptions.ShortException;

@@ -1,4 +1,4 @@
-package user_exception;
+package user_exception.cls;
 
 import user_exception.exceptions.LongException;
 import user_exception.exceptions.PasswordMismatchException;
