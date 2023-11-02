@@ -14,8 +14,8 @@ public class Manager extends Worker{
     }
 
     public void setSalary(Salary salary) {
-        if (salary.amount<35_000){
-            salary.amount=35_000;
+        if (salary.amount<35_000) {
+            salary.amount = 35_000;
         }
         this.salary = salary;
     }
