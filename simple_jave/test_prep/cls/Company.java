@@ -1,5 +1,7 @@
 package simple_jave.test_prep.cls;
 
+import java.util.Arrays;
+
 public class Company {
     Department[] departments;
 
@@ -20,5 +22,12 @@ public class Company {
             departments=tempDep;
         }
         this.departments = departments;
+    }
+
+    @Override
+    public String toString() {
+        return "Company{" +
+                "departments=" + Arrays.toString(departments) +
+                '}';
     }
 }

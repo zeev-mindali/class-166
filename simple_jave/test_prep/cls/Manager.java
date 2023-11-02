@@ -27,4 +27,13 @@ public class Manager extends Worker{
     public void setPosition(String position) {
         this.position = position;
     }
+
+    @Override
+    public String toString() {
+        return "Manager{" +
+                "position='" + position + '\'' +
+                ", name='" + name + '\'' +
+                ", expirance=" + expirance +
+                '}';
+    }
 }

@@ -40,4 +40,12 @@ public class Salary {
         }
         this.bonus = bonus;
     }
+
+    @Override
+    public String toString() {
+        return "Salary{" +
+                "amount=" + amount +
+                ", bonus=" + bonus +
+                '}';
+    }
 }

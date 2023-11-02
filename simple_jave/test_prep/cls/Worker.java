@@ -24,4 +24,12 @@ public class Worker {
     public void setExpirance(int expirance) {
         this.expirance = expirance;
     }
+
+    @Override
+    public String toString() {
+        return "Worker{" +
+                "name='" + name + '\'' +
+                ", expirance=" + expirance +
+                '}';
+    }
 }

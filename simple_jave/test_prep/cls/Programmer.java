@@ -15,4 +15,13 @@ public class Programmer extends Worker{
     public void setSalary(Salary salary) {
         this.salary = salary;
     }
+
+    @Override
+    public String toString() {
+        return "Programmer{" +
+                "salary=" + salary +
+                ", name='" + name + '\'' +
+                ", expirance=" + expirance +
+                '}';
+    }
 }

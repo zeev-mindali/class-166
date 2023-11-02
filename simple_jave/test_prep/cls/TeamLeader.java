@@ -18,4 +18,13 @@ public class TeamLeader extends Worker{
         }
         this.salary = salary;
     }
+
+    @Override
+    public String toString() {
+        return "TeamLeader{" +
+                "salary=" + salary +
+                ", name='" + name + '\'' +
+                ", expirance=" + expirance +
+                '}';
+    }
 }
