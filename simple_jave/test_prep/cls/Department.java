@@ -2,8 +2,6 @@ package simple_jave.test_prep.cls;
 
 import simple_jave.targil2_hw_28_09.Employee;
 
-import java.util.Arrays;
-
 public class Department {
     public static final String[] DEP_NAMES={"programming","qa","marketing","administration"};
     private String name;
@@ -58,12 +56,5 @@ public class Department {
         this.workers = workers;
     }
 
-    @Override
-    public String toString() {
-        return "Department{" +
-                "name='" + name + '\'' +
-                ", manager=" + manager +
-                ", workers=" + Arrays.toString(workers) +
-                '}';
-    }
+
 }
