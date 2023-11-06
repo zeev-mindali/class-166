@@ -1,5 +1,9 @@
 package simple_jave.exam_prep_2.cls;
 
+import simple_jave.MyObject.Car;
+
+import java.util.Arrays;
+
 public class Migrash {
     private String manager;
     private String address;
@@ -61,5 +65,33 @@ public class Migrash {
         } else {
             System.out.println("the total of cars is over the capacity");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Migrash{" +
+                "manager='" + manager + '\'' +
+                ", address='" + address + '\'' +
+                ", tel='" + tel + '\'' +
+                ", capacity=" + capacity +
+                ", cars=" + Arrays.toString(cars) +
+                "}\n";
+    }
+
+    public int getCheapCar(){
+        int low = Integer.MAX_VALUE;
+        for (Cars item:cars){
+            if (item.price<low){
+                low=item.price;
+            }
+        }
+        return low;
+    }
+    public int getTotalMoney(){
+        int result = 0;
+        for (Cars item:cars){
+            result+=item.price;
+        }
+        return result;
     }
 }

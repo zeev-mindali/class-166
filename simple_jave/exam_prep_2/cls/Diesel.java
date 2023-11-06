@@ -1,6 +1,7 @@
 package simple_jave.exam_prep_2.cls;
 
 import java.sql.Date;
+import java.util.Arrays;
 
 public class Diesel extends Cars{
     private boolean gasReport;
@@ -16,5 +17,23 @@ public class Diesel extends Cars{
 
     public void setGasReport(boolean gasReport) {
         this.gasReport = gasReport;
+    }
+
+    @Override
+    public String toString() {
+        return "Diesel{" +
+                "gasReport=" + gasReport +
+                ", km=" + km +
+                ", owners=" + owners +
+                ", testDate=" + testDate +
+                ", color='" + color + '\'' +
+                ", images=" + Arrays.toString(images) +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", model='" + model + '\'' +
+                ", lp=" + lp +
+                ", owner='" + owner + '\'' +
+                ", buyer=" + buyer +
+                ", price=" + price +
+                "}\n";
     }
 }

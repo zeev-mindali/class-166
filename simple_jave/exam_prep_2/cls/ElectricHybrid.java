@@ -1,6 +1,7 @@
 package simple_jave.exam_prep_2.cls;
 
 import java.sql.Date;
+import java.util.Arrays;
 
 public class ElectricHybrid extends Cars{
     private int batteryCapacity;
@@ -26,5 +27,24 @@ public class ElectricHybrid extends Cars{
 
     public void setBatteryCycles(int batteryCycles) {
         this.batteryCycles = batteryCycles;
+    }
+
+    @Override
+    public String toString() {
+        return "ElectricHybrid{" +
+                "batteryCapacity=" + batteryCapacity +
+                ", batteryCycles=" + batteryCycles +
+                ", km=" + km +
+                ", owners=" + owners +
+                ", testDate=" + testDate +
+                ", color='" + color + '\'' +
+                ", images=" + Arrays.toString(images) +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", model='" + model + '\'' +
+                ", lp=" + lp +
+                ", owner='" + owner + '\'' +
+                ", buyer=" + buyer +
+                ", price=" + price +
+                "}\n";
     }
 }

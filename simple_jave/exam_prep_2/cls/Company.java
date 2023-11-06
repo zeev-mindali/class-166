@@ -1,5 +1,7 @@
 package simple_jave.exam_prep_2.cls;
 
+import java.util.Arrays;
+
 public class Company {
     private String name;
     private String tel;
@@ -50,7 +52,7 @@ public class Company {
     }
 
     public void setOwner(String owner) {
-        owner = owner;
+        this.owner = owner;
     }
 
     public static int getTotalCar() {
@@ -59,5 +61,15 @@ public class Company {
 
     public static void setTotalCar(int totalCar) {
         Company.totalCar = totalCar;
+    }
+
+    @Override
+    public String toString() {
+        return "Company{" +
+                "name='" + name + '\'' +
+                ", tel='" + tel + '\'' +
+                ", owner='" + owner + '\'' +
+                ", migrashim=" + Arrays.toString(migrashim) +
+                "}\n";
     }
 }

@@ -62,4 +62,15 @@ public class Payment {
     public void setTotalPayments(int totalPayments) {
         this.totalPayments = totalPayments;
     }
+
+    @Override
+    public String toString() {
+        return "Payment{" +
+                "cash=" + cash +
+                ", mimun='" + mimun + '\'' +
+                ", payments=" + payments +
+                ", monthlyPayment=" + monthlyPayment +
+                ", totalPayments=" + totalPayments +
+                "}\n";
+    }
 }

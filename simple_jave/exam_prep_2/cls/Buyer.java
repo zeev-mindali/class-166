@@ -44,4 +44,14 @@ public class Buyer {
     public void setPayment(Payment payment) {
         this.payment = payment;
     }
+
+    @Override
+    public String toString() {
+        return "Buyer{" +
+                "name='" + name + '\'' +
+                ", tel='" + tel + '\'' +
+                ", address='" + address + '\'' +
+                ", payment=" + payment +
+                "}\n";
+    }
 }
