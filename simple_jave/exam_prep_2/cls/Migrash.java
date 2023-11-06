@@ -13,6 +13,7 @@ public class Migrash {
         setTel(tel);
         setCapacity(capacity);
         setCars(cars);
+        Company.setTotalCar(Company.getTotalCar()+cars.length);
     }
 
     public String getManager() {

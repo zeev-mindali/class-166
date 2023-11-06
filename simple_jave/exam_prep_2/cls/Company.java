@@ -53,5 +53,11 @@ public class Company {
         owner = owner;
     }
 
+    public static int getTotalCar() {
+        return totalCar;
+    }
 
+    public static void setTotalCar(int totalCar) {
+        Company.totalCar = totalCar;
+    }
 }
