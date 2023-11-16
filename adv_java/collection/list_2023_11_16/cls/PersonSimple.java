@@ -1,4 +1,4 @@
-package adv_java.collection.list_2013_11_16.cls;
+package adv_java.collection.list_2023_11_16.cls;
 
 //lombok
 //to install lombok
@@ -13,7 +13,6 @@ package adv_java.collection.list_2013_11_16.cls;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 @NoArgsConstructor          //default constructor
 @AllArgsConstructor         //all argument contructor
