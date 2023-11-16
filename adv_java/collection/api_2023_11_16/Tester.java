@@ -18,6 +18,7 @@ import java.util.Scanner;
 public class Tester {
 
     private static String endPoint = "https://data.gov.il/api/3/action/datastore_search?resource_id=053cea08-09bc-40ec-8f7a-156f0677aff3&q=";
+    private static String handiCapEndPoint = "https://data.gov.il/api/3/action/datastore_search?resource_id=c8b9f9c8-4612-4068-934f-d4acd2e3c06e&q=";
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -25,7 +26,12 @@ public class Tester {
         String carNumber = scanner.nextLine();
         //System.out.println(getURLdata(endPoint+carNumber));
         //invoke method->getURLdata which will return string by the URL of endPoint
-        readJSON(getURLdata(endPoint));
+        //readJSON(getURLdata(endPoint));
+        checkHandiCap(getURLdata(handiCapEndPoint+carNumber));
+    }
+
+    private static void checkHandiCap(String urLdata) {
+        System.out.println(urLdata);
     }
 
     public static void readJSON(String myString){
