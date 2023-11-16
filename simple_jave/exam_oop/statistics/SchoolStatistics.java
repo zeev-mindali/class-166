@@ -4,6 +4,7 @@ import simple_jave.exam_oop.cls.*;
 
 import java.util.Random;
 
+
 public class SchoolStatistics {
     private static School school;
     private static String[] profession = {"math", "chemistry", "geography", "literature", "physics", "sports"};
@@ -32,6 +33,7 @@ public class SchoolStatistics {
             int totalGrade = school.getClassrooms()[0].getStudents().length*school.getClassrooms().length;
             System.out.println(SchoolStatistics.profession[index]+" : "+avg[index]/totalGrade);
         }
+        Person person = new Person("zeev",49);
 
     }
     public static School getSchool(){
@@ -88,4 +90,6 @@ public class SchoolStatistics {
         }
         return avg/school.getClassrooms().length;
     }
+
+
 }

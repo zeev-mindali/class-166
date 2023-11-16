@@ -38,4 +38,19 @@ public class Student extends Person{
     public int getSingleGrade(int index){
         return grades[index].getScore();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Student)) return false;
+        Student student = (Student) o;
+        return Arrays.equals(getGrades(), student.getGrades());
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(getGrades());
+    }
+
+
 }
