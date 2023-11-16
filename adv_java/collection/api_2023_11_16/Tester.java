@@ -40,6 +40,7 @@ public class Tester {
             System.out.println("Car not found");
             return;
         }
+
         var singleCar = (JSONObject)carArray.get(0);
         //System.out.println(singleCar);
         System.out.println("Manufacturer: "+singleCar.get("tozeret_nm"));
