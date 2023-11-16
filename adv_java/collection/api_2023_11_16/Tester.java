@@ -27,11 +27,22 @@ public class Tester {
         //System.out.println(getURLdata(endPoint+carNumber));
         //invoke method->getURLdata which will return string by the URL of endPoint
         //readJSON(getURLdata(endPoint));
-        checkHandiCap(getURLdata(handiCapEndPoint+carNumber));
+        System.out.println(checkHandiCap(getURLdata(handiCapEndPoint+carNumber))?"handi cap car":"not handi cap car (fine 1000nis)");
     }
 
-    private static void checkHandiCap(String urLdata) {
-        System.out.println(urLdata);
+    private static boolean checkHandiCap(String urLdata) {
+        //convert our string to json object
+        var carData = new JSONObject(urLdata);
+        //getting out result from json object;
+        var result = carData.getJSONObject("result");
+        //the records is an array -> [ ]
+        var carArray = result.getJSONArray("records");
+        //System.out.println(carArray);
+        if (carArray.length()==0){
+            System.out.println("Car not found");
+            return false;
+        }
+        return true;
     }
 
     public static void readJSON(String myString){
