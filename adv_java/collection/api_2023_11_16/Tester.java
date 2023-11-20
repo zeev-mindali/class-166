@@ -26,8 +26,9 @@ public class Tester {
         String carNumber = scanner.nextLine();
         //System.out.println(getURLdata(endPoint+carNumber));
         //invoke method->getURLdata which will return string by the URL of endPoint
-        //readJSON(getURLdata(endPoint));
-        System.out.println(checkHandiCap(getURLdata(handiCapEndPoint+carNumber))?"handi cap car":"not handi cap car (fine 1000nis)");
+        readJSON(getURLdata(endPoint+carNumber));
+        //System.out.println(checkHandiCap(getURLdata(handiCapEndPoint+carNumber))?"handi cap car":"not handi cap car (fine 1000nis)");
+        System.out.println("We are still working!!!!");
     }
 
     private static boolean checkHandiCap(String urLdata) {
@@ -59,8 +60,8 @@ public class Tester {
         }
 
         var singleCar = (JSONObject)carArray.get(0);
-        //System.out.println(singleCar);
-        System.out.println("Manufacturer: "+singleCar.get("tozeret_nm"));
+        System.out.println(singleCar);
+        //System.out.println("Manufacturer: "+singleCar.get("tozeret_nm"));
     }
     private static String getURLdata(String url){
         //string builder for getting data that will not be immutable
