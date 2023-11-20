@@ -45,14 +45,26 @@ public class Tester {
 
 //        Thread myThread = new Thread(new MyRunnable("Zeevik the fox"));
 //        myThread.start();
-            List<Thread> myNames = new ArrayList<>();
-            myNames.add(new Thread(new MyRunnable("Zeev")));
-            myNames.add(new Thread(new MyRunnable("Yonatan")));
-            myNames.add(new Thread(new MyRunnable("Gideon")));
+//            List<Thread> myNames = new ArrayList<>();
+//            myNames.add(new Thread(new MyRunnable("Zeev")));
+//            myNames.add(new Thread(new MyRunnable("Yonatan")));
+//            myNames.add(new Thread(new MyRunnable("Gideon")));
 
-            for (Thread item:myNames){
-                item.start();
-            }
+//            for (Thread item:myNames){
+//                item.start();
+//            }
 
+        System.out.println("id: "+Thread.currentThread().getId());
+        System.out.println("name: "+Thread.currentThread().getName());
+        System.out.println("Priority: "+Thread.currentThread().getPriority());
+        System.out.println("toString: "+Thread.currentThread().toString());
+        System.out.println();
+        CharPrinter_Thread printer1 = new CharPrinter_Thread('$');
+        System.out.println("id: "+printer1.getId());
+        System.out.println("name: "+printer1.getName());
+        System.out.println("Priority: "+printer1.getPriority());
+        System.out.println("toString: "+printer1.toString());
+        printer1.setName("printer thread"); // <== setting a name to thread to recognize
+        System.out.println("name: "+printer1.getName());
     }
 }
