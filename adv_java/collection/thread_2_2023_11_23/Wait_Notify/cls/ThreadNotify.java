@@ -8,13 +8,13 @@ public class ThreadNotify extends Thread{
     }
 
     public void run(){
-        System.out.println(getClass().getName()+" is going to sleep");
+        System.out.println(getClass().getName()+"And the oscar goes to .....");
         try {
             sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(getClass().getName()+" tell to stop wait");
+        System.out.println(getClass().getName()+" and the winner is:");
 
         synchronized (threadWaiting) {
             threadWaiting.notify();
