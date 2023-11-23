@@ -6,7 +6,7 @@ import java.util.List;
 public class Airport {
     public static final int TOTAL_PLANE=10;
     private static List<Thread> fleet = new ArrayList<>();
-
+    private static Object object = new Object();
     public static void main(String[] args) throws InterruptedException {
         for (int counter=1;counter<=TOTAL_PLANE;counter++){
 //            Runnable airPlane = new AirPlane(counter);
@@ -26,5 +26,7 @@ public class Airport {
         System.out.println("All planes is on the ground, closing air port");
         Thread.sleep(1000);
         System.out.println("Air Port is closed !!!!");
+
+        //object.notifyAll();
     }
 }
