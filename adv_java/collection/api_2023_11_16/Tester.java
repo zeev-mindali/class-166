@@ -28,12 +28,6 @@ public class Tester {
         //invoke method->getURLdata which will return string by the URL of endPoint
         //readJSON(getURLdata(endPoint));
         System.out.println(checkHandiCap(getURLdata(handiCapEndPoint+carNumber))?"handi cap car":"not handi cap car (fine 1000nis)");
-
-        //home work:
-        //check if the car number, is car/bike/truck
-        //data.gov.il
-        
-
     }
 
     private static boolean checkHandiCap(String urLdata) {
