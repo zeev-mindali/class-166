@@ -81,19 +81,26 @@ public class BirthdaySystemReminder {
     }
 
     private void printEvents() {
-
+        Map<Integer,Integer> events = BirthdayStatistics.getEvents(people);
+        for (Integer key: events.keySet()){
+            //System.out.println("Month: "+String.format("%2d",key)+" number of birthdays "+events.get(key));
+            //System.out.println("Month: "+(key<10?"0":"")+key+" number of birthdays "+events.get(key));
+            System.out.printf("Month: %2d -> number of birthday %d\n",key,events.get(key));
+        }
     }
 
     private void printSadlyMonth() {
-
+        int sadMonth = BirthdayStatistics.getSadlyMonth(people);
+        System.out.println("The sadly month (more money to plumbir): "+sadMonth);
     }
 
     private void printHappyMonth() {
-
+        int happyMonth = BirthdayStatistics.getHappyMonth(people);
+        System.out.println("The happy month (most expensive month): "+happyMonth);
     }
 
     private void printCountMembers() {
-        System.out.println("There is "+this.people.size()+" in the system");
+        System.out.println("There is "+BirthdayStatistics.countMembers(people)+" in the system");
     }
 
     private void printAll() {
