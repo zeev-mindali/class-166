@@ -59,17 +59,18 @@ public class BirthdayStatistics {
     public static Map<Integer,Integer> getEvents(Set<Person> people){
         Map<Integer,Integer> events = new TreeMap<>();
 
-//        for (int counter=0;counter<12;counter++){
-//            events.put(counter+1,0);
-//        }
+        for (int counter=0;counter<12;counter++){
+            events.put(counter+1,0);
+        }
 
         for (Person singlePerson:people){
             int month = singlePerson.getBirthDay().getMonthValue();
-            if (events.containsKey(month)){
-                events.put(month, events.get(month)+1);
-            } else {
-                events.put(month,1);
-            }
+//            if (events.containsKey(month)){
+//                events.put(month, events.get(month)+1);
+//            } else {
+//                events.put(month,1);
+//            }
+            events.put(month, events.get(month)+1);
         }
 
         return events;

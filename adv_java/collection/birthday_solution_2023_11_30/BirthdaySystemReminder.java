@@ -6,20 +6,20 @@ import java.util.*;
 public class BirthdaySystemReminder {
     private BirthDayTask task;
     private Set<Person> people;
-    private static Scanner scanner;
+    private static Scanner scanner = new Scanner(System.in);
 
     public BirthdaySystemReminder(){
-        people = new HashSet<>();
+        this.people = new HashSet<>();
         task = new BirthDayTask(people);
         Thread thread = new Thread(task);
         thread.start();
         //thread will be terminated upon program closing.... (user/unchecked exception run time error)
-        thread.setDaemon(true);
+        //thread.setDaemon(true);
         startSystem();
     }
 
     public void showMenu(){
-        System.out.println("Birthday System Menu\n"+
+        System.out.println("\n\n\nBirthday System Menu\n"+
                 "============================\n"+
                 "1. Add Person\n"+
                 "2. Delete Person\n"+
