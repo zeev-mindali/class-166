@@ -27,6 +27,11 @@ public class InterestTask implements Runnable{
     @Override
     public void run() {
         while(true){
+            try {
+                Thread.sleep(sleepingTime);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println(clients);
             for (Client client:clients){
                 System.out.println("id: "+client.getId()+" name: "+client.getName()+ " BEFORE update:"
@@ -38,11 +43,7 @@ public class InterestTask implements Runnable{
                 System.out.println("id: "+client.getId()+" name: "+client.getName()+ " AFTER update:"
                         +" balance: "+client.getAccount().getBalance());
             }
-            try {
-                Thread.sleep(sleepingTime);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+
         }
     }
 }

@@ -24,6 +24,7 @@ public class BankSystem {
         //we have started the bank
         clients = new TreeSet<>(new ClientComperator());
         task =  new InterestTask(clients);
+        //convert runnable to thread....
         Thread thread = new Thread(task);
         thread.start();
     }
