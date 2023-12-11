@@ -11,5 +11,6 @@ public class Run {
 
         //SingleTon (Thread Safe)->Double Check
         BankSystem.getInstance().startSystem();
+
     }
 }
