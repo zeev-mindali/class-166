@@ -1,0 +1,1 @@
+File->Project Structure->Libraries->add from maven->mysql:mysql-connector-java:8.0.29
