@@ -23,6 +23,7 @@ public class tester {
             "(sn,price,category,supplier,name) VALUES(?,?,?,?,?)";
 
     public static final String ALL_PRODUCTS = "SELECT * FROM `onlinestore`.`products`";
+    public static final String ALL_PRODUCTS_ABOVE_PRICE= "SELECT * FROM `onlinestore`.`products` WHERE price>?";
     public static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS`onlinestore`.`olga` (" +
             "  `id` INT NOT NULL AUTO_INCREMENT," +
             "  `child_name` VARCHAR(45) NULL," +
@@ -31,7 +32,7 @@ public class tester {
             "  `child_birthday` DATETIME NULL," +
             "  PRIMARY KEY (`id`)," +
             "  UNIQUE INDEX `child_name_UNIQUE` (`child_name` ASC) VISIBLE);";
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         //addProduct(new Product("zeevik",0.99,1,1,"Zeevik the fox"));
 //        Map<Integer,Object> myParams = new HashMap<>();
 //        List<Product> myProducts = new ArrayList<>();
@@ -55,9 +56,22 @@ public class tester {
 //        //create table....
 //        //createTable();
 
+        List<Product> myProducts = new ArrayList<>();
         Map<Integer,Object> params = new HashMap<>();
-        ResultSet result = DBtools.runQueryForResult(ALL_PRODUCTS,params);
-
+        params.put(1,1000);
+        ResultSet result = DBtools.runQueryForResult(ALL_PRODUCTS_ABOVE_PRICE,params);
+        //int,string,int,int,int,string
+        //Iterator
+        while (result.next()){
+            int id = result.getInt(1);
+            String sn = result.getString(2);
+            int price = result.getInt(3);
+            int cat = result.getInt(4);
+            int sup = result.getInt(5);
+            String name = result.getString(6);
+            myProducts.add(new Product(id,sn,price,cat,sup,name));
+        }
+        System.out.println(myProducts);
     }
 
     private static void createTable() {

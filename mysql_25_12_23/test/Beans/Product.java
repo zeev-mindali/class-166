@@ -7,6 +7,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class Product {
     //sn,price,category,supplier,name
+    private int id;
     private String sn;
     private double price;
     private int category;
